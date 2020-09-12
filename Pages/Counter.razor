@@ -1,0 +1,31 @@
+﻿@page "/counter"
+
+<h3>
+    Componente Calculadora
+     </h3>
+<label><strong>Primer numero:  </strong></label>
+<input  type="text" @bind="N1"/>
+<br />
+<label><strong>Segundo numero: </strong></label>
+<input  type="text" @bind="N2"/>
+<br />
+
+<br />  
+<button  @onclick="calcular">Calcular</button>
+<br />
+<label><strong>La suma es:</strong>@ResSuma </label>
+<br />
+<label><strong>La resta es:</strong>@ResResta </label>
+<br />
+<label><strong>La Multiplicacion es:</strong>@ResMultiplicacion </label>
+@code {
+  private float N1, N2, ResSuma, ResResta, ResMultiplicacion;
+
+    private void calcular()
+    {
+        ResSuma = N1 + N2;
+        ResResta = N1 - N2;
+        ResMultiplicacion = N1 * N2;
+    }
+}
+ 
